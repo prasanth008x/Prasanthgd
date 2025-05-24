@@ -2,162 +2,227 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prasanth | Graphic Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
       font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #0f0f0f;
+      background: radial-gradient(circle at center, #0a0a0a, #000000);
       color: white;
+      overflow-x: hidden;
     }
 
     header {
-      background: #1e1e1e;
-      padding: 20px 50px;
+      background: #111;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     header h1 {
-      color: #f39c12;
-      font-size: 28px;
+      color: #00ffff;
+      font-size: 26px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px #00ffff88;
     }
 
     nav a {
-      color: white;
       margin-left: 20px;
+      color: white;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffee;
+      text-shadow: 0 0 8px #00ffee;
     }
 
     section {
-      padding: 60px 50px;
+      padding: 80px 40px;
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero {
       text-align: center;
-      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .hero h2 {
-      font-size: 36px;
-      color: #f39c12;
+      font-size: 42px;
+      color: #00ffee;
+      text-shadow: 0 0 15px #00ffee;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      margin-top: 10px;
-      font-size: 18px;
+      font-size: 20px;
       color: #ccc;
+      margin-top: 10px;
+      max-width: 600px;
     }
 
-    .skills, .projects {
-      background: #1a1a1a;
-      border-radius: 10px;
+    .box {
+      background-color: #121212;
+      border-left: 5px solid #00ffff;
       padding: 30px;
-      margin-top: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      animation: slideIn 1s ease forwards;
+    }
+
+    .box h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+      font-size: 22px;
+      text-shadow: 0 0 10px #00ffff;
     }
 
     .skills ul {
-      list-style: none;
       display: flex;
       flex-wrap: wrap;
+      list-style: none;
       gap: 15px;
     }
 
     .skills li {
-      background: #f39c12;
+      background-color: #00ffee;
+      color: black;
       padding: 10px 20px;
-      border-radius: 20px;
-      color: #000;
-      font-weight: bold;
+      border-radius: 30px;
+      font-weight: 600;
     }
 
     .projects img {
       width: 100%;
       max-width: 300px;
-      border-radius: 10px;
+      border-radius: 8px;
+      margin-right: 20px;
       margin-top: 15px;
+      box-shadow: 0 0 15px #00ffee88;
     }
 
-    .contact {
-      background: #1e1e1e;
-      text-align: center;
-      padding: 40px;
+    .enquiry img {
+      width: 180px;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ffee99;
     }
 
     .contact a {
-      color: #f39c12;
+      color: #00ffee;
       text-decoration: none;
-      font-size: 18px;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
-      background: #121212;
+      padding: 20px;
+      background-color: #0f0f0f;
       color: #888;
+      border-top: 2px solid #00ffee55;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+
+      .skills ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .projects img {
+        max-width: 100%;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Prasanth Design</h1>
+    <h1>Prasanth</h1>
     <nav>
       <a href="#home">Home</a>
-      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#enquiry">Enquiry</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero" id="home">
-    <h2>Hi, I'm Prasanth</h2>
-    <p>Fresher Graphic Designer | Photoshop • Illustrator • Canva</p>
+    <h2>I'm Prasanth</h2>
+    <p>A creative graphic designer passionate about delivering stunning visuals that speak louder than words.</p>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p style="margin-top:10px; color:#ccc;">I’m a passionate graphic designer with hands-on experience in Photoshop, Illustrator, and Canva. I enjoy creating posters, logos, social media designs, and bringing creative ideas to life through visual storytelling.</p>
-  </section>
-
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
+  <section class="box skills" id="skills">
+    <h3>Skills</h3>
     <ul>
-      <li>Adobe Photoshop</li>
+      <li>Photoshop</li>
       <li>Illustrator</li>
       <li>Canva</li>
-      <li>Branding</li>
-      <li>Social Media Design</li>
+      <li>Poster Design</li>
       <li>Logo Design</li>
+      <li>Social Media Banners</li>
     </ul>
   </section>
 
-  <section class="projects" id="projects">
-    <h2>My Projects</h2>
-    <p style="color:#ccc;">Here are some of my recent works:</p>
-    <img src="https://github.com/prasanth008x/Prasanthgd/blob/main/spicy%20chickent%20(4).png?raw=true" alt="Project 1" />
-    <img src="https://github.com/prasanth008x/Prasanthgd/blob/main/trusty%20snap%20(1).png?raw=true" alt="Project 2" />
-    <!-- Add more images here -->
+  <section class="box projects" id="projects">
+    <h3>Projects</h3>
+    <img src="project1.jpg" alt="Design Sample 1">
+    <img src="project2.jpg" alt="Design Sample 2">
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:prasantharumugam16@gmail.com">prasantharumugam16@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/prasanth.me" target="_blank">@prasanth.me</a></p>
+  <section class="box enquiry" id="enquiry">
+    <h3>Enquiry</h3>
+    <p>Scan the QR to submit your design need:</p>
+    <img src="your-qr-code.png" alt="QR Code">
+    <p style="margin-top:10px;">I offer designs for Posters, Logos, Business Cards, Reels, and Social Media Posts.</p>
+  </section>
+
+  <section class="box contact" id="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:yourmail@example.com">prasantharumugam16.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/yourid" target="_blank">@prasanth.me</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Prasanth. All rights reserved.</p>
+    <p>© 2025 Prasanth | All Rights Reserved</p>
   </footer>
 
 </body>
